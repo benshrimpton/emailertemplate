@@ -3,11 +3,11 @@
 
 <style type="text/css">
 html {
-background: url(emailer.png) no-repeat center top;
+background: url(emailer.png) no-repeat right top;
 }
 table, tr, td {
-	border: solid 1px #ddd;
-/*
+
+/*	border: solid 1px #ddd;
 	margin: 2px;
 	padding: 2px;
 */
@@ -16,13 +16,13 @@ table, tr, td {
 </head>
 
 <body>
-<div style="font-family: Futura, 'Trebuchet MS', Arial, sans-serif; font-size: 13px; margin: 0; padding: 0; color: #333; line-height: 131%; letter-spacing: 1px; text-align:center;">
-<div style="font-family: Futura, 'Trebuchet MS', Arial, sans-serif; font-size: 13px; margin: 0; padding: 0; color: #333; line-height: 131%; letter-spacing: 1px; text-align:center;">
+<div style="font-family: Futura,'Cordel', 'Century Gothic', CenturyGothic, AppleGothic, 'Trebuchet MS', Arial, sans-serif; font-size: 13px; margin: 0; padding: 0; color: #333; line-height: 131%; letter-spacing: 1px; text-align:center;">
+<div style="font-size: 13px; margin: 0; padding: 0; color: #333; line-height: 131%; letter-spacing: 1px; text-align:center;">
 <table cellspacing="0" cellpadding="0" border="0" style="width: 440px; border: solid 1px red; margin: 0 auto;">
 <tr>
 <td align="center" valign="top" style="padding:0px 0 20px 0">
 <!-- header starts here -->
-<!-- {{layout handle="sales_email_order_items" order=$order}} -->
+{{layout handle="sales_email_order_items" order=$order}}
 
 <table cellspacing="0" cellpadding="0" style="width: 440px; border:solid 1px red;">
 <tbody>
@@ -32,7 +32,7 @@ table, tr, td {
 
 <tr align="center">
 <td valign="top">
-	<font style="font-family: Futura, 'Trebuchet MS', Arial, sans-serif; font-size: 24px; line-height: 117%; color: #333; letter-spacing: 1px;">Thank you</font></td>
+	<font style="font-family: Futura,'Cordel', 'Century Gothic', CenturyGothic, AppleGothic, 'Trebuchet MS', Arial, sans-serif; font-size: 24px; line-height: 117%; color: #333; letter-spacing: 1px;">Thank you</font></td>
 </tr>
 
 <tr height="50px">
@@ -113,7 +113,7 @@ when your order is shipped. Thank you.</font>
 
 <td width="60px"></td>
 
-<td><font style="font-family: Futura, 'Trebuchet MS', Arial, sans-serif; font-size: 13px; margin: 0; padding: 0; color: #333; line-height: 131%; letter-spacing: 1px;">{{var order.getShippingAddress().format('html')}}</font></td>
+<td><font style="font-family: Futura, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;'Trebuchet MS', Arial, sans-serif; font-size: 13px; margin: 0; padding: 0; color: #333; line-height: 131%; letter-spacing: 1px;">{{var order.getShippingAddress().format('html')}}</font></td>
 
 <td width="60px"></td>
 </tr>
