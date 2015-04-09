@@ -1,0 +1,53 @@
+<!doctyle html>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes' name='viewport'>
+
+<style>
+.img-wrap {
+	width: 400px;
+	height: 600px;
+	border: solid 2px red;
+	overflow: hidden;
+}
+.img-wrap img {
+	width: 100%;
+	height: auto;
+	-webkit-transform: scale(2);
+}
+.blue {
+	width: 30px;
+	height: 30px;
+	background: red;
+	position: absolute;
+}
+</style>
+
+<div class="img-wrap">
+<img src="http://asset.victoriabeckham.com/system/gemgento/asset_files/files/000/012/670/large/ss15_drs_427_white_1.jpg">
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+
+addEventListener('touchmove', function(e) { // When the user moves their finger, the function will begin.
+     
+    e.preventDefault(); // Stop any page annoying scrolling.
+ 
+    var imgWidth = $('.img-wrap img').width();
+    var imgHeight = $('.img-wrap img').height();
+    //console.log(imgWidth);
+    var touch = e.touches[0]; // Fires every time the user moves.
+    //once the image has been moved, we need to allow for its new tranform co-ordinates some how,
+         
+    var posY = Math.floor(touch.pageY - imgHeight  / 2 ); // Get the Y position - this need work
+    var posX = Math.floor(touch.pageX - imgWidth / 2 ); // Get the X position  - this needs work
+    var unit = 'px';
+         
+        //document.body.appendChild(blue); 
+        
+        $('.img-wrap img').css({
+        
+	       "transform": "scale(2) translate3d("+posX+unit+","+posY+unit+",0px)"
+	        
+        });
+
+}, false);
+</script>
